@@ -1,11 +1,12 @@
-# from .file import *
 from .cond import *
 conds = [
-    IfCond
+    IfCond,
+    BoolSwitchExpr,
+    SwitchExpr
 ]
 
-from .loop import *
-loops = [
+from .comp import *
+comps = [
 
 ]
 
@@ -18,4 +19,19 @@ logics = [
     NotNode
 ]
 
-nodes = conds + loops + logics
+from .math import *
+maths = [
+
+]
+
+from .function import *
+functions = [
+
+]
+
+from .convert import *
+converts = [
+
+]
+
+nodes = conds + comps + logics + maths + functions + converts

@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FlowNodes.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/anytype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/basenode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/cond.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodes/loop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/categories.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/util.py" afterDir="false" />
+    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Initial commit, with if, and, or, eq, neq, not">
+      <change afterPath="$PROJECT_DIR$/nodes/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/convert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodes/math.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/anytype.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/anytype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/cond.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/cond.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/loop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/categories.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +32,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gitmylo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gitmylo/FlowNodes.git&quot;,
+    &quot;accountId&quot;: &quot;b609a173-3d46-4b22-a381-aa5cb07aaee3&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2fp2lzSB8qgLEfxUIzxVGrzUx5M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,20 +55,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/milan/Desktop/AIAIA/ComfyUI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/milan/Desktop/AIAIA/ComfyUI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\milan\Desktop\AIAIA\ComfyUI\custom_nodes\FlowNodes\util" />
@@ -110,14 +116,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714483854113</updated>
-      <workItem from="1714483855232" duration="6096000" />
+      <workItem from="1714483855232" duration="7903000" />
+      <workItem from="1714492779007" duration="2861000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit, with if, and, or, eq, neq, not">
+      <option name="closed" value="true" />
+      <created>1714490192963</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714490192963</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit, with if, and, or, eq, neq, not" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit, with if, and, or, eq, neq, not" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714489896629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
+    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714490002830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
   </component>
 </project>

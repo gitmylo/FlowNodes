@@ -7,6 +7,9 @@ def category(name: str) -> str:
 
 categories = {
     "cond": category("conditions"),
-    "loop": category("loops"),
+    "comp": category("comparisons"),
     "logic": category("logic"),
+    "math": category("math"),
+    "func": category("function"),
+    "conv": category("convert")
 }
