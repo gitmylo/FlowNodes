@@ -1,16 +1,32 @@
-from abc import abstractmethod
-
 from .basenode import BaseNode
 from ..util.categories import categories
 
 category = categories["logic"]
 
+actions = ["and", "or", "equal", "not equal"]
+
+
+def operation(a, b, action):
+    match action:
+        case "and":
+            return a and b
+        case "or":
+            return a or b
+        case "equal":
+            return a == b
+        case "not equal":
+            return a != b
+    return False
+
 
 class LogicNode(BaseNode):
+    name = "2 boolean operation"
+    display_name = "🆎 2 Boolean operation"
 
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
+            "Operation": (actions,),
             "A": ("BOOLEAN",),
             "B": ("BOOLEAN",)
         }}
@@ -20,41 +36,8 @@ class LogicNode(BaseNode):
     RETURN_NAMES = ("Result",)
     FUNCTION = "operation"
 
-    @abstractmethod
-    def operation(self, A: bool, B: bool):
-        pass
-
-
-class AndNode(LogicNode):
-    name = "Boolean And"
-    display_name = "🆎 Boolean And"
-
-    def operation(self, A: bool, B: bool):
-        return A and B
-
-
-class OrNode(LogicNode):
-    name = "Boolean Or"
-    display_name = "🆎 Boolean Or"
-
-    def operation(self, A: bool, B: bool):
-        return A or B
-
-
-class EqNode(LogicNode):
-    name = "Boolean Equals"
-    display_name = "🆎 Boolean Equals"
-
-    def operation(self, A: bool, B: bool):
-        return A == B
-
-
-class NeqNode(LogicNode):
-    name = "Boolean Not Equals"
-    display_name = "🆎 Boolean Not Equals"
-
-    def operation(self, A: bool, B: bool):
-        return A != B
+    def operation(self, Operation, A: bool, B: bool):
+        return (operation(A, B, Operation),)
 
 
 class NotNode(BaseNode):
@@ -73,4 +56,4 @@ class NotNode(BaseNode):
     FUNCTION = "operation"
 
     def operation(self, In):
-        return not In
+        return (not In,)

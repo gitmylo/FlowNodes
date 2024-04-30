@@ -19,20 +19,26 @@ Same as `Switch (Bool)`, but instead of `True`/`False`, it's the numbers `0-9`
 
 ## Comparisons
 Comparison nodes take multiple inputs, and perform a comparison between them, and output the result.
+### Compare (Both Int/Float)
+* Takes 2 inputs, and an operation.
+* Returns the result of the operation on the two inputs.
 
 ## Logic
 Logic nodes take 1/2 boolean inputs, and return a boolean.
-* And: `a && b`
-* Or: `a || b`
-* Eq: `a == b`
-* Neq: `a != b`
-* Not: `!a`
+## Operation
+* Takes 2 booleans, and an operation
+* Returns the result of the operation on the two inputs.
 
 ## Math
-Math nodes take a few numerical inputs, 
+Math nodes take a few numerical inputs, and returns the result of the selected operation.
+### Expression (Both Int/Float)
+* Takes 2 inputs, and an operation.
+* Returns the result of the operation on the two inputs.
 
 ## Function
 Function nodes perform an operation on the inputs, and output the result. (Most similar to most other comfy nodes)
 
 ## Convert
 Convert nodes specifically convert from one data type to another.
+### Convert to type
+Converts from one type to the selected type.

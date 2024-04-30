@@ -27,8 +27,8 @@ class IfCond(BaseNode):
 
 
 class BoolSwitchExpr(BaseNode):
-    name = "Int Switch expression"
-    display_name = "🔀 Int Switch expression"
+    name = "Boolean Switch expression"
+    display_name = "🔀 Boolean Switch expression"
 
     @classmethod
     def INPUT_TYPES(s):
@@ -55,7 +55,7 @@ class SwitchExpr(BaseNode):
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
-            "Value": ("INTEGER", {"default": 0, "min": 0, "max": 9, "step": 1})
+            "Value": ("INT", {"default": 0, "min": 0, "max": 9, "step": 1})
         }, "optional": {
             # "0": (any,),
             # "1": (any,),

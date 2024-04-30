@@ -7,21 +7,20 @@ conds = [
 
 from .comp import *
 comps = [
-
+    IntCompare,
+    FloatCompare
 ]
 
 from .logic import *
 logics = [
-    AndNode,
-    OrNode,
-    EqNode,
-    NeqNode,
+    LogicNode,
     NotNode
 ]
 
 from .math import *
 maths = [
-
+    IntExpression,
+    FloatExpression
 ]
 
 from .function import *
@@ -31,7 +30,7 @@ functions = [
 
 from .convert import *
 converts = [
-
+    ConvertToType
 ]
 
 nodes = conds + comps + logics + maths + functions + converts
