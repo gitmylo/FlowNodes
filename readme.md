@@ -1,6 +1,9 @@
 # ComfyUI FlowNodes
 A [ComfyUI](https://github.com/comfyanonymous/comfyui) node pack containing nodes for basic programming logic.
 
+## NOTICE:
+FlowNodes is very WIP and early in development. If you encounter a problem, please create an issue.
+
 # Table of contents
 <!-- TOC -->
 * [ComfyUI FlowNodes](#comfyui-flownodes)

@@ -101,7 +101,7 @@ class FlowMergeNode(BaseNode):
         return {"required": {
             "Input": (any,)
         }, "optional": {
-            "Flow": "FLOW"
+            "Flow": ("FLOW",)
         }}
 
     CATEGORY = category

@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Flow, regex, console, operations, scripts, create empty object">
+    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Use blob link instead...">
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/cond.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/cond.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -47,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -109,7 +115,7 @@
       <updated>1714483854113</updated>
       <workItem from="1714483855232" duration="7903000" />
       <workItem from="1714492779007" duration="9499000" />
-      <workItem from="1714552331569" duration="14784000" />
+      <workItem from="1714552331569" duration="26301000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, with if, and, or, eq, neq, not">
       <option name="closed" value="true" />
@@ -143,20 +149,48 @@
       <option name="project" value="LOCAL" />
       <updated>1714569398317</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Upload missing image">
+      <option name="closed" value="true" />
+      <created>1714569757707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714569757707</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Use url to image">
+      <option name="closed" value="true" />
+      <created>1714569902600</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714569902600</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Use blob link instead...">
+      <option name="closed" value="true" />
+      <created>1714570005044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714570005044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit, with if, and, or, eq, neq, not" />
     <MESSAGE value="New categories" />
     <MESSAGE value="Merge logic node, comparison nodes, math expressions" />
     <MESSAGE value="Flow, regex, console, operations, scripts, create empty object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flow, regex, console, operations, scripts, create empty object" />
+    <MESSAGE value="Upload missing image" />
+    <MESSAGE value="Use url to image" />
+    <MESSAGE value="Use blob link instead..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use blob link instead..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714569251485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
+    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714581054188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
   </component>
 </project>
