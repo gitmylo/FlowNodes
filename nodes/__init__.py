@@ -2,7 +2,9 @@ from .cond import *
 conds = [
     IfCond,
     BoolSwitchExpr,
-    SwitchExpr
+    SwitchExpr,
+    FlowStartNode,
+    FlowMergeNode
 ]
 
 from .comp import *
@@ -25,12 +27,17 @@ maths = [
 
 from .function import *
 functions = [
-
+    RegexMatch,
+    ConsolePrint,
+    CustomOperation,
+    CustomOutputOperation,
+    ExecuteScript
 ]
 
 from .convert import *
 converts = [
-    ConvertToType
+    ConvertToType,
+    CreateEmpty
 ]
 
 nodes = conds + comps + logics + maths + functions + converts

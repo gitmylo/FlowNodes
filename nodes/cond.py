@@ -15,6 +15,8 @@ class IfCond(BaseNode):
         return {"required": {
             "Bool": ("BOOLEAN",),
             "Value": (any,)
+        }, "optional": {
+            "Flow": ("FLOW",),
         }}
 
     CATEGORY = category
@@ -35,6 +37,7 @@ class BoolSwitchExpr(BaseNode):
         return {"required": {
             "Value": ("BOOLEAN",)
         }, "optional": {
+            "Flow": ("FLOW",),
             "True": (any,),
             "False": (any,),
         }}
@@ -57,18 +60,8 @@ class SwitchExpr(BaseNode):
         return {"required": {
             "Value": ("INT", {"default": 0, "min": 0, "max": 9, "step": 1})
         }, "optional": {
-            # "0": (any,),
-            # "1": (any,),
-            # "2": (any,),
-            # "3": (any,),
-            # "4": (any,),
-            # "5": (any,),
-            # "6": (any,),
-            # "7": (any,),
-            # "8": (any,),
-            # "9": (any,),
             str(v): (any,) for v in range(10)
-        }}
+        }.update({"Flow": ("FLOW",)})}
 
     CATEGORY = category
     RETURN_TYPES = (any,)
@@ -77,3 +70,44 @@ class SwitchExpr(BaseNode):
 
     def node(self, Value, **kwargs):
         return kwargs[str(Value)]
+
+
+class FlowStartNode(BaseNode):
+    name = "Flow start"
+    display_name = "🌊 Activate flow from any"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {},
+                "optional": {
+                    "Trigger": (any,)
+                }}
+
+    CATEGORY = category
+    RETURN_TYPES = ("FLOW",)
+    RETURN_NAMES = ("Flow",)
+    FUNCTION = "node"
+
+    def node(self, **kwargs):
+        return (None,)  # Flow is just a hack to get the executions in the wanted order.
+
+
+class FlowMergeNode(BaseNode):
+    name = "Flow merge"
+    display_name = "🌊 Merge flow (bottleneck)"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {
+            "Input": (any,)
+        }, "optional": {
+            "Flow": "FLOW"
+        }}
+
+    CATEGORY = category
+    RETURN_TYPES = (any, "FLOW")
+    RETURN_NAMES = ("Output", "Flow")
+    FUNCTION = "node"
+
+    def node(self, Input, Flow):
+        return Input, Flow

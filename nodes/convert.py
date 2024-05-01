@@ -39,3 +39,25 @@ class ConvertToType(BaseNode):
 
     def convert(self, Type, Input):
         return (types[Type](Input),)
+
+
+types_create = {"list": lambda: [], "dict": lambda: {}}
+
+
+class CreateEmpty(BaseNode):
+    name = "Create empty object"
+    display_name = "➕ Create empty object"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {
+            "Type": (list(types_create.keys()),)
+        }}
+
+    CATEGORY = category
+    RETURN_TYPES = (any,)
+    RETURN_NAMES = ("Object",)
+    FUNCTION = "create"
+
+    def create(self, Type, **kwargs):
+        return (types_create[Type](),)

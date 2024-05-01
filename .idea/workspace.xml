@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="New categories">
+    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Merge logic node, comparison nodes, math expressions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/basenode.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/basenode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/comp.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/comp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodes/cond.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/cond.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nodes/convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/convert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/math.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/math.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,20 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/milan/Desktop/AIAIA/ComfyUI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/milan/Desktop/AIAIA/ComfyUI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\milan\Desktop\AIAIA\ComfyUI\custom_nodes\FlowNodes\util" />
@@ -115,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1714483854113</updated>
       <workItem from="1714483855232" duration="7903000" />
-      <workItem from="1714492779007" duration="8666000" />
+      <workItem from="1714492779007" duration="9499000" />
+      <workItem from="1714552331569" duration="14148000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, with if, and, or, eq, neq, not">
       <option name="closed" value="true" />
@@ -133,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714495681281</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge logic node, comparison nodes, math expressions">
+      <option name="closed" value="true" />
+      <created>1714501682671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714501682671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,9 +150,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit, with if, and, or, eq, neq, not" />
     <MESSAGE value="New categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="New categories" />
+    <MESSAGE value="Merge logic node, comparison nodes, math expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge logic node, comparison nodes, math expressions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714501189873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
+    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714568603504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
   </component>
 </project>
