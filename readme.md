@@ -39,7 +39,7 @@ Flows can be used in two ways
 1. As input, for a node which takes a flow, like some of the function nodes.
 2. As input for the `Merge flow (bottleneck)` node, this node makes sure the order is fixed, and can be used to repeat if the flow is repeated using a `repeater` node. (For example, from [Comfyui-custom-scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts))
 
-![Flow](https://raw.githubusercontent.com/gitmylo/FlowNodes/master/img/Flow%201.jpg)
+![Flow](https://github.com/gitmylo/FlowNodes/blob/master/img/Flow%201.jpg?raw=true)
 
 # Nodes
 ## Conditions
