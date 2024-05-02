@@ -42,9 +42,18 @@ def custom_op_action(first, second, third, action):
         case "f / s":
             return first / second
         case "f[s]":
-            return first[second]
+            print(type(first))
+            if isinstance(first, list):
+                if len(first) < second and second >= 0:
+                    return first[second]
+            elif isinstance(first, dict):
+                if second in first:
+                    return first[second]
+            return third
         case "getattr(f, s)":
-            return getattr(first, second)
+            if hasattr(first, second):
+                return getattr(first, second)
+            return third
 
         case "f[s] = t":
             first[second] = third
@@ -64,8 +73,11 @@ class CustomOperation(BaseNode):
         return {"required": {
             "Action": (custom_op_actions,),
             "First": (any,),
-            "Second": (any,)
+            "Second": (any,),
+
+            "no_cache": ("NO_CACHE",)
         }, "optional": {
+            "Default": (any,),
             "Flow": ("FLOW",)
         }}
 
@@ -75,7 +87,7 @@ class CustomOperation(BaseNode):
     CATEGORY = category
 
     def custom_operation(self, Action, First, Second, **kwargs):
-        return custom_op_action(First, Second, None, Action), None
+        return custom_op_action(First, Second, kwargs["Default"] if "Default" in kwargs else None, Action), None
 
 
 class CustomOutputOperation(CustomOperation):
@@ -87,7 +99,9 @@ class CustomOutputOperation(CustomOperation):
         return {"required": {
             "Action": (output_op_actions,),
             "First": (any,),
-            "Second": (any,)
+            "Second": (any,),
+
+            "no_cache": ("NO_CACHE",)
         },
             "optional": {
                 "Third": (any),
@@ -109,7 +123,8 @@ class ConsolePrint(BaseNode):
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
-            "Value": (any,)
+            "Value": (any,),
+            "no_cache": ("NO_CACHE",)
         }}
 
     RETURN_TYPES = ("FLOW",)
@@ -118,7 +133,7 @@ class ConsolePrint(BaseNode):
     CATEGORY = category
     OUTPUT_NODE = True
 
-    def console_print(self, Value):
+    def console_print(self, Value, **kwargs):
         print(Value)
         return (None,)
 
@@ -130,7 +145,8 @@ class ExecuteScript(BaseNode):
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
-            "Value": ("STRING", {"default": "out = input0", "multiline": True})
+            "Value": ("STRING", {"default": "out = input0", "multiline": True}),
+            "no_cache": ("NO_CACHE",)
         }, "optional": {
             "Input": (any,),
             "Flow": ("FLOW",)
@@ -163,7 +179,7 @@ class StackParams(BaseNode):
     def INPUT_TYPES(s):
         return {
             "required": {}, "optional":
-                {"input" + str(i): (any, {"dynamicAvailable": "input"}) for i in range(20)} | {"Flow": ("Flow",)}
+                {"input" + str(i): (any, {"dynamicAvailable": "input"}) for i in range(20)} | {"Flow": ("FLOW",)}
         }
 
     RETURN_TYPES = ("EXEC_PARAMS", "FLOW")
@@ -173,3 +189,27 @@ class StackParams(BaseNode):
 
     def stack_params(self, **kwargs):
         return kwargs, None
+
+
+persistent_object = {}
+
+
+class GetGlobalObject(BaseNode):
+    name = "Get persistent dict"
+    display_name = "🔺 Get persistent dict"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        # return {"required": {}, "hidden": {"no_cache": ("_", {"NoCache": True})}}
+        return {"required": {
+            "no_cache": ("NO_CACHE",)
+        }}
+
+    RETURN_TYPES = (any,)
+    RETURN_NAMES = ("Persistent dict",)
+    FUNCTION = "get_persistent"
+    CATEGORY = category
+
+    def get_persistent(self, **kwargs):
+        global persistent_object
+        return (persistent_object,)

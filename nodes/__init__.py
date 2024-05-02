@@ -32,7 +32,8 @@ functions = [
     CustomOperation,
     CustomOutputOperation,
     ExecuteScript,
-    StackParams
+    StackParams,
+    GetGlobalObject
 ]
 
 from .convert import *

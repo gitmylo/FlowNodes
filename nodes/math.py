@@ -42,7 +42,7 @@ class IntExpression(BaseNode):
     FUNCTION = "expr"
     CATEGORY = category
 
-    def expr(self, Action, A, B):
+    def expr(self, Action, A, B, **kwargs):
         return (operation(A, B, Action, int),)
 
 
@@ -65,5 +65,5 @@ class FloatExpression(BaseNode):
     FUNCTION = "expr"
     CATEGORY = category
 
-    def expr(self, Action, A, B):
+    def expr(self, Action, A, B, **kwargs):
         return (operation(A, B, Action, float),)

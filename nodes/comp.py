@@ -42,7 +42,7 @@ class IntCompare(BaseNode):
     FUNCTION = "compare"
     CATEGORY = category
 
-    def compare(self, Action, A, B):
+    def compare(self, Action, A, B, **kwargs):
         return (operation(A, B, Action),)
 
 
@@ -65,5 +65,5 @@ class FloatCompare(BaseNode):
     FUNCTION = "compare"
     CATEGORY = category
 
-    def compare(self, Action, A, B):
+    def compare(self, Action, A, B, **kwargs):
         return (operation(A, B, Action),)

@@ -110,5 +110,5 @@ class FlowMergeNode(BaseNode):
     RETURN_NAMES = ("Output", "Flow")
     FUNCTION = "node"
 
-    def node(self, Input, Flow):
+    def node(self, Input, Flow, **kwargs):
         return Input, Flow

@@ -36,7 +36,7 @@ class LogicNode(BaseNode):
     RETURN_NAMES = ("Result",)
     FUNCTION = "operation"
 
-    def operation(self, Operation, A: bool, B: bool):
+    def operation(self, Operation, A: bool, B: bool, **kwargs):
         return (operation(A, B, Operation),)
 
 
@@ -55,5 +55,5 @@ class NotNode(BaseNode):
     RETURN_NAMES = ("Result",)
     FUNCTION = "operation"
 
-    def operation(self, In):
+    def operation(self, In, **kwargs):
         return (not In,)

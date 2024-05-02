@@ -37,7 +37,7 @@ class ConvertToType(BaseNode):
     RETURN_NAMES = ("Result",)
     FUNCTION = "convert"
 
-    def convert(self, Type, Input):
+    def convert(self, Type, Input, **kwargs):
         return (types[Type](Input),)
 
 

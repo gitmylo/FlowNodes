@@ -26,7 +26,8 @@ FlowNodes is very WIP and early in development. If you encounter a problem, plea
     * [Regex match](#regex-match)
     * [Operations](#operations)
     * [Print to console](#print-to-console)
-    * [Execute script (UNSAFE)](#execute-script-unsafe)
+    * [Execute script (UNSAFE) / Stack params](#execute-script-unsafe--stack-params)
+    * [Get persistent dict](#get-persistent-dict)
   * [Convert](#convert)
     * [Convert to type](#convert-to-type)
     * [Create empty object](#create-empty-object)
@@ -90,13 +91,15 @@ Simple operations like +, -, *, and some functions. Except they are executed on 
 ### Print to console
 Prints its input to console. This is mainly for debugging.
 ### Execute script (UNSAFE) / Stack params
-**this function can be very unsafe because it executes user specified code. To check the code, look for imports.**  
+**this node can be very unsafe because it executes user specified code. To check the code, look for imports. Nodes will automatically become red if they contain import statements.**  
 Execute a python script, takes one input variable currently. Referred to in the code as `inp`.  
 If a parameter stacker node is connected, the node can have multiple inputs, referred to as inputN where N is the number of the input.
 **example**:
 ```python
 out = input0  # Output the input, this node will do nothing, just pass through.
 ```
+### Get persistent dict
+This node lets you access the persistent dict. This is a dictionary which is available between runs. Note that it resets when the server is restarted. And it's not stored in the workflow. It's specifically for changing things between runs.
 
 ## Convert
 Convert nodes specifically convert from one data type to another.
