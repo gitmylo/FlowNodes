@@ -39,7 +39,9 @@ functions = [
 from .convert import *
 converts = [
     ConvertToType,
-    CreateEmpty
+    CreateEmpty,
+    MergeList,
+    UnMergeList
 ]
 
 nodes = conds + comps + logics + maths + functions + converts

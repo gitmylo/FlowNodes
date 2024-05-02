@@ -61,3 +61,45 @@ class CreateEmpty(BaseNode):
 
     def create(self, Type, **kwargs):
         return (types_create[Type](),)
+
+
+class MergeList(BaseNode):
+    name = "Merge list (any)"
+    display_name = "📃 Batch to List"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {
+            "Batch": (any,)
+        }}
+
+    INPUT_IS_LIST = (True,)
+
+    CATEGORY = category
+    RETURN_TYPES = (any,)
+    RETURN_NAMES = ("List",)
+    FUNCTION = "merge_list"
+
+    def merge_list(self, Batch, **kwargs):
+        return (Batch,)
+
+
+class UnMergeList(BaseNode):
+    name = "Unmerge list (any)"
+    display_name = "📃 List to Batch"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {
+            "List": (any,)
+        }}
+
+    OUTPUT_IS_LIST = (True,)
+
+    CATEGORY = category
+    RETURN_TYPES = (any,)
+    RETURN_NAMES = ("Batch",)
+    FUNCTION = "unmerge_list"
+
+    def unmerge_list(self, List, **kwargs):
+        return (List,)

@@ -33,6 +33,7 @@ FlowNodes is very WIP and early in development. If you encounter a problem, plea
   * [Convert](#convert)
     * [Convert to type](#convert-to-type)
     * [Create empty object](#create-empty-object)
+    * [Convert List to Batch/Batch to List](#convert-list-to-batchbatch-to-list)
 <!-- TOC -->
 
 # Examples
@@ -121,3 +122,7 @@ Convert nodes specifically convert from one data type to another.
 Converts from one type to the selected type.
 ### Create empty object
 Create an empty object. Currently supports dicts and lists.
+### Convert List to Batch/Batch to List
+Convert a batch (Items are executed separately when put into another node) to a list (Items are all given at once, but the node needs to support it.)  
+This is most useful for reading/writing individual batch items using operation nodes. Or to give it as an input for a script node.  
+![Batch and list convert](https://github.com/gitmylo/FlowNodes/blob/master/img/Batch%20List%20Convert.jpg?raw=true)
