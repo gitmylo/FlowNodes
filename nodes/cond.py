@@ -48,7 +48,7 @@ class BoolSwitchExpr(BaseNode):
     FUNCTION = "node"
 
     def node(self, Value, **kwargs):
-        return kwargs["True"] if Value else kwargs["False"]
+        return (kwargs["True"] if Value else kwargs["False"],)
 
 
 class SwitchExpr(BaseNode):
@@ -58,10 +58,10 @@ class SwitchExpr(BaseNode):
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
-            "Value": ("INT", {"default": 0, "min": 0, "max": 9, "step": 1})
-        }, "optional": {
-            str(v): (any,) for v in range(10)
-        }.update({"Flow": ("FLOW",)})}
+            "Value": ("INT", {"default": 0, "min": 0, "max": 19, "step": 1})
+        }, "optional":
+            {"Case " + str(v): (any, {"dynamicAvailable": "Case"}) for v in range(20)} | {"Flow": ("FLOW",)}
+        }
 
     CATEGORY = category
     RETURN_TYPES = (any,)
@@ -69,7 +69,8 @@ class SwitchExpr(BaseNode):
     FUNCTION = "node"
 
     def node(self, Value, **kwargs):
-        return kwargs[str(Value)]
+        key = "Case " + str(Value)
+        return (kwargs[key] if key in kwargs else None,)
 
 
 class FlowStartNode(BaseNode):

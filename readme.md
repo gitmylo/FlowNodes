@@ -7,6 +7,7 @@ FlowNodes is very WIP and early in development. If you encounter a problem, plea
 # Table of contents
 <!-- TOC -->
 * [ComfyUI FlowNodes](#comfyui-flownodes)
+  * [NOTICE:](#notice)
 * [Table of contents](#table-of-contents)
 * [Flow](#flow)
   * [What is "Flow"?](#what-is-flow)
@@ -60,6 +61,7 @@ Takes a boolean, and two values. If the boolean is `True`, the first value will 
 
 ### Switch (Int)
 Same as `Switch (Bool)`, but instead of `True`/`False`, it's the numbers `0-9`
+![Switch (Int)](https://github.com/gitmylo/FlowNodes/blob/master/img/Int%20switch.jpg?raw=true)
 
 ## Comparisons
 Comparison nodes take multiple inputs, and perform a comparison between them, and output the result.
