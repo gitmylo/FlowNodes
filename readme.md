@@ -9,6 +9,8 @@ FlowNodes is very WIP and early in development. If you encounter a problem, plea
 * [ComfyUI FlowNodes](#comfyui-flownodes)
   * [NOTICE:](#notice)
 * [Table of contents](#table-of-contents)
+* [Examples](#examples)
+  * [Counter](#counter)
 * [Flow](#flow)
   * [What is "Flow"?](#what-is-flow)
 * [Nodes](#nodes)
@@ -33,6 +35,15 @@ FlowNodes is very WIP and early in development. If you encounter a problem, plea
     * [Create empty object](#create-empty-object)
 <!-- TOC -->
 
+# Examples
+## Counter
+The counter counts up one number on each run, each run will re-execute all the required nodes.  
+**Additional nodes used in the example:**
+* String and Int from [Various ComfyUI Nodes by Type](https://github.com/jamesWalker55/comfyui-various)
+* Show text from [ComfyUI custom scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts)
+
+![Counter example](https://github.com/gitmylo/FlowNodes/blob/master/img/Counter%20example.jpg?raw=true)
+
 # Flow
 ## What is "Flow"?
 Flow is a connection, which can be used to force comfyUI to perform function operations in a certain order. Flow is a single ton `None` value which can be passed through as optional input to enforce an order of operations.
@@ -44,9 +55,12 @@ Flows can be used in two ways
 1. As input, for a node which takes a flow, like some of the function nodes.
 2. As input for the `Merge flow (bottleneck)` node, this node makes sure the order is fixed, and can be used to repeat if the flow is repeated using a `repeater` node. (For example, from [Comfyui-custom-scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts))
 
-![Flow](https://github.com/gitmylo/FlowNodes/blob/master/img/Flow%201.jpg?raw=true)
+![Flow](https://github.com/gitmylo/FlowNodes/blob/master/img/Flow%201.jpg?raw=true)  
+*(Screenshot was taken before flow nodes got styled)*
 
 # Nodes
+If any nodes are missing from this list, please inform me by making an issue.
+
 ## Conditions
 Condition nodes will behave differently depending on the condition's value.
 ### If
