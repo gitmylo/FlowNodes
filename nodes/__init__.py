@@ -41,7 +41,8 @@ converts = [
     ConvertToType,
     CreateEmpty,
     MergeList,
-    UnMergeList
+    UnMergeList,
+    CreateList
 ]
 
 nodes = conds + comps + logics + maths + functions + converts

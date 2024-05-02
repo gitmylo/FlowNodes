@@ -73,7 +73,7 @@ class MergeList(BaseNode):
             "Batch": (any,)
         }}
 
-    INPUT_IS_LIST = (True,)
+    INPUT_IS_LIST = (True,)  # Referred to as batch here
 
     CATEGORY = category
     RETURN_TYPES = (any,)
@@ -94,7 +94,7 @@ class UnMergeList(BaseNode):
             "List": (any,)
         }}
 
-    OUTPUT_IS_LIST = (True,)
+    OUTPUT_IS_LIST = (True,)  # Referred to as batch here
 
     CATEGORY = category
     RETURN_TYPES = (any,)
@@ -103,3 +103,24 @@ class UnMergeList(BaseNode):
 
     def unmerge_list(self, List, **kwargs):
         return (List,)
+
+
+class CreateList(BaseNode):
+    name = "Create list"
+    display_name = "📃 Create list"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+                    "required": {"no_cache": ("NO_CACHE",)},
+                    "optional": {"input" + str(i): (any, {"dynamicAvailable": "input"}) for i in range(20)}
+                }
+
+
+    CATEGORY = category
+    RETURN_TYPES = (any,)
+    RETURN_NAMES = ("List",)
+    FUNCTION = "create_list"
+
+    def create_list(self, **kwargs):
+        return (list({k: kwargs[k] for k in kwargs if k != "no_cache"}.values()),)

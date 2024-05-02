@@ -126,3 +126,6 @@ Create an empty object. Currently supports dicts and lists.
 Convert a batch (Items are executed separately when put into another node) to a list (Items are all given at once, but the node needs to support it.)  
 This is most useful for reading/writing individual batch items using operation nodes. Or to give it as an input for a script node.  
 ![Batch and list convert](https://github.com/gitmylo/FlowNodes/blob/master/img/Batch%20List%20Convert.jpg?raw=true)
+### Create list
+Uses no-cache, so it won't lead to unexpected results with caching.  
+Creates a python list containing the items. (Can be modified with write operation nodes, using flow is recommended in this case, merge flow after the last operation.)

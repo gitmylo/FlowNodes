@@ -28,7 +28,7 @@ class RegexMatch(BaseNode):
 
 
 custom_op_actions = ["f + s", "f - s", "f * s", "f / s", "f[s]", "getattr(f, s)"]
-output_op_actions = ["f[s] = t", "setattr(f, s, t)"]
+output_op_actions = ["f[s] = t", "setattr(f, s, t)", "f.append(s)"]
 
 
 def custom_op_action(first, second, third, action):
@@ -57,10 +57,13 @@ def custom_op_action(first, second, third, action):
 
         case "f[s] = t":
             first[second] = third
-            return None
+            return first
         case "setattr(f, s, t)":
             setattr(first, second, third)
-            return None
+            return first
+        case "f.append(s)":
+            first.append(second)
+            return first
     return None
 
 
@@ -108,12 +111,11 @@ class CustomOutputOperation(CustomOperation):
                 "Flow": ("FLOW",)
             }}
 
-    RETURN_TYPES = ("FLOW",)
-    RETURN_NAMES = ("Flow",)
+    RETURN_TYPES = (any, "FLOW")
+    RETURN_NAMES = ("First", "Flow",)
 
-    def custom_operation(self, Action, First, Second, Third, **kwargs):
-        custom_op_action(First, Second, Third, Action)
-        return (None,)
+    def custom_operation(self, Action, First, Second, **kwargs):
+        return (custom_op_action(First, Second, kwargs["Third"] if "Third" in kwargs else None, Action), None)
 
 
 class ConsolePrint(BaseNode):
