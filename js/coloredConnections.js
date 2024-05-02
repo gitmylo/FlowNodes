@@ -1,7 +1,8 @@
 import { app } from '../../scripts/app.js'
 
 const colors = {
-    "FLOW": ["#dddddd", "#ffffff", LiteGraph.ARROW_SHAPE]
+    "FLOW": ["#dddddd", "#ffffff", LiteGraph.ARROW_SHAPE],
+    "EXEC_PARAMS": ["#5895fd", "#0054ff", LiteGraph.ROUND_SHAPE],
 }
 
 function updateNodeRender(node) {

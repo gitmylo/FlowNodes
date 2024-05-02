@@ -38,6 +38,12 @@ function updateNodeEnabledConnections(node) {
 
     node.inputs = outGroup
 
+    // TODO: Make this work with multiline textboxes (They don't work properly)
+    const nSize = node.computeSize()
+    node.size[1] = nSize[1]
+    if (node.onResize)
+        node.onResize(node.size);
+
     app.graph.setDirtyCanvas(true, true)
 }
 

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="White flow connections">
-      <change afterPath="$PROJECT_DIR$/img/Int switch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dynamicAvailable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/warnUnsafe.js" afterDir="false" />
+    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Dynamic inputs, improved/fixed Int switch etc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/coloredConnections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/cond.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/cond.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/coloredConnections.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/coloredConnections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dynamicAvailable.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dynamicAvailable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +117,7 @@
       <workItem from="1714483855232" duration="7903000" />
       <workItem from="1714492779007" duration="9499000" />
       <workItem from="1714552331569" duration="34461000" />
-      <workItem from="1714635570219" duration="5303000" />
+      <workItem from="1714635570219" duration="14917000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, with if, and, or, eq, neq, not">
       <option name="closed" value="true" />
@@ -184,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714582664621</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Dynamic inputs, improved/fixed Int switch etc">
+      <option name="closed" value="true" />
+      <created>1714641301850</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714641301850</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,9 +207,10 @@
     <MESSAGE value="Use url to image" />
     <MESSAGE value="Use blob link instead..." />
     <MESSAGE value="White flow connections" />
-    <option name="LAST_COMMIT_MESSAGE" value="White flow connections" />
+    <MESSAGE value="Dynamic inputs, improved/fixed Int switch etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dynamic inputs, improved/fixed Int switch etc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714640893950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
+    <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714650517538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />
   </component>
 </project>

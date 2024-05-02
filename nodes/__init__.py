@@ -31,7 +31,8 @@ functions = [
     ConsolePrint,
     CustomOperation,
     CustomOutputOperation,
-    ExecuteScript
+    ExecuteScript,
+    StackParams
 ]
 
 from .convert import *

@@ -89,12 +89,13 @@ Takes a pattern and a string. Uses python regex. Returns an array containing the
 Simple operations like +, -, *, and some functions. Except they are executed on any object.
 ### Print to console
 Prints its input to console. This is mainly for debugging.
-### Execute script (UNSAFE)
+### Execute script (UNSAFE) / Stack params
 **this function can be very unsafe because it executes user specified code. To check the code, look for imports.**  
 Execute a python script, takes one input variable currently. Referred to in the code as `inp`.  
+If a parameter stacker node is connected, the node can have multiple inputs, referred to as inputN where N is the number of the input.
 **example**:
 ```python
-out = inp  # Output the input, this node will do nothing, just pass through.
+out = input0  # Output the input, this node will do nothing, just pass through.
 ```
 
 ## Convert

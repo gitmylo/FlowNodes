@@ -130,7 +130,7 @@ class ExecuteScript(BaseNode):
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
-            "Value": ("STRING", {"default": "out = inp", "multiline": True})
+            "Value": ("STRING", {"default": "out = input0", "multiline": True})
         }, "optional": {
             "Input": (any,),
             "Flow": ("FLOW",)
@@ -142,8 +142,34 @@ class ExecuteScript(BaseNode):
     CATEGORY = category
 
     def exec_script(self, Value, **kwargs):
-        inp = kwargs["Input"] if "Input" in kwargs.keys() else None
+        # inp = kwargs["Input"] if "Input" in kwargs.keys() else None
         glob = {}
-        loc = {"inp": inp, "out": None}
+        loc = {"out": None}
+        if "Input" in kwargs:
+            if isinstance(kwargs["Input"], dict):
+                loc = loc | (kwargs["Input"])
+            else:
+                loc["input0"] = kwargs["Input"]
+
         exec(Value, glob, loc)  # defined function will be stored in locals
         return loc['out'], None
+
+
+class StackParams(BaseNode):
+    name = "Stack parameters"
+    display_name = "🐍 Stack python exec parameters"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {}, "optional":
+                {"input" + str(i): (any, {"dynamicAvailable": "input"}) for i in range(20)} | {"Flow": ("Flow",)}
+        }
+
+    RETURN_TYPES = ("EXEC_PARAMS", "FLOW")
+    RETURN_NAMES = ("Stacked params", "Flow")
+    FUNCTION = "stack_params"
+    CATEGORY = category
+
+    def stack_params(self, **kwargs):
+        return kwargs, None
