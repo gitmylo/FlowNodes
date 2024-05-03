@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from util.categories import category
+from ..util.categories import category
 
 
 class BaseNode:
