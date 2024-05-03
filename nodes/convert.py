@@ -64,28 +64,7 @@ class CreateEmpty(BaseNode):
 
 
 class MergeList(BaseNode):
-    name = "Merge list (any)"
-    display_name = "📃 Batch to List"
-
-    @classmethod
-    def INPUT_TYPES(s):
-        return {"required": {
-            "Batch": (any,)
-        }}
-
-    INPUT_IS_LIST = (True,)  # Referred to as batch here
-
-    CATEGORY = category
-    RETURN_TYPES = (any,)
-    RETURN_NAMES = ("List",)
-    FUNCTION = "merge_list"
-
-    def merge_list(self, Batch, **kwargs):
-        return (Batch,)
-
-
-class UnMergeList(BaseNode):
-    name = "Unmerge list (any)"
+    name = "Merge batch (any)"
     display_name = "📃 List to Batch"
 
     @classmethod
@@ -94,20 +73,41 @@ class UnMergeList(BaseNode):
             "List": (any,)
         }}
 
-    OUTPUT_IS_LIST = (True,)  # Referred to as batch here
+    INPUT_IS_LIST = (True,)
 
     CATEGORY = category
     RETURN_TYPES = (any,)
     RETURN_NAMES = ("Batch",)
-    FUNCTION = "unmerge_list"
+    FUNCTION = "merge_list"
 
-    def unmerge_list(self, List, **kwargs):
+    def merge_list(self, List, **kwargs):
         return (List,)
 
 
+class UnMergeList(BaseNode):
+    name = "Unmerge batch (any)"
+    display_name = "📃 Batch to List"
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": {
+            "Batch": (any,)
+        }}
+
+    OUTPUT_IS_LIST = (True,)
+
+    CATEGORY = category
+    RETURN_TYPES = (any,)
+    RETURN_NAMES = ("List",)
+    FUNCTION = "unmerge_list"
+
+    def unmerge_list(self, Batch, **kwargs):
+        return (Batch,)
+
+
 class CreateList(BaseNode):
-    name = "Create list"
-    display_name = "📃 Create list"
+    name = "Create batch"
+    display_name = "📃 Create batch"
 
     @classmethod
     def INPUT_TYPES(s):
@@ -119,7 +119,7 @@ class CreateList(BaseNode):
 
     CATEGORY = category
     RETURN_TYPES = (any,)
-    RETURN_NAMES = ("List",)
+    RETURN_NAMES = ("Batch",)
     FUNCTION = "create_list"
 
     def create_list(self, **kwargs):

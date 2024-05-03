@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Add CreateList node, append operation, Write operation return type (For flow-less chaining)">
+    <list default="true" id="65d7c9c4-f89f-4aad-9222-05c4e9258b6a" name="Changes" comment="Fix relative import path I missed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodes/basenode.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/basenode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/convert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodes/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/nodes/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +118,7 @@
       <workItem from="1714635570219" duration="31162000" />
       <workItem from="1714674611913" duration="2393000" />
       <workItem from="1714723529053" duration="1041000" />
-      <workItem from="1714725468787" duration="39000" />
+      <workItem from="1714725468787" duration="1455000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, with if, and, or, eq, neq, not">
       <option name="closed" value="true" />
@@ -230,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714677008815</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fix relative import path I missed.">
+      <option name="closed" value="true" />
+      <created>1714725564100</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714725564100</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +262,8 @@
     <MESSAGE value="Add example graph image" />
     <MESSAGE value="Batch &lt;=&gt; List convert" />
     <MESSAGE value="Add CreateList node, append operation, Write operation return type (For flow-less chaining)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add CreateList node, append operation, Write operation return type (For flow-less chaining)" />
+    <MESSAGE value="Fix relative import path I missed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix relative import path I missed." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlowNodes$main.coverage" NAME="main Coverage Results" MODIFIED="1714676894119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\milan\Desktop\AIAIA\ComfyUI" />

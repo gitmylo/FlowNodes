@@ -42,9 +42,8 @@ def custom_op_action(first, second, third, action):
         case "f / s":
             return first / second
         case "f[s]":
-            print(type(first))
             if isinstance(first, list):
-                if len(first) < second and second >= 0:
+                if len(first) > second >= 0:
                     return first[second]
             elif isinstance(first, dict):
                 if second in first:
