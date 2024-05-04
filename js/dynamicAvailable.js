@@ -32,9 +32,13 @@ function updateNodeEnabledConnections(node) {
                         link: null
                     })
             }
-            if (input != null) outGroup.push(input)
+            else outGroup.push(input)
         }
     }
+
+    // Get rid of widgets, as converting between them can be buggy. Setting to [] causes less bugs than setting to undefined.
+    node.widgets = []
+    node.widgets_values = []
 
     node.inputs = outGroup
 
@@ -63,9 +67,13 @@ app.registerExtension({
         let flag = false
         const groups = {}
 
-        const opt = nodeData?.input?.["optional"] ?? []
-        for (const inputValKey in opt) { // All optional inputs
-            const inputVal = opt[inputValKey]
+        const req = nodeData?.input?.["required"] ?? {}
+        const opt = nodeData?.input?.["optional"] ?? {}
+
+        const all = Object.assign({}, req, opt)
+
+        for (const inputValKey in all) { // All optional inputs
+            const inputVal = all[inputValKey]
             const flags = inputVal?.[1]
             const dya = flags?.dynamicAvailable
             if (flags && flags?.dynamicAvailable) {
@@ -81,7 +89,7 @@ app.registerExtension({
         // Register this group list
         nodeGroups[nodeData.name] = {
             "groups": groups,
-            "original": opt
+            "original": all
         }
 
         const onConnectionsChange = nodeType.prototype.onConnectionsChange
