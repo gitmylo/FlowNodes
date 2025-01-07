@@ -108,7 +108,7 @@ Simple operations like +, -, *, and some functions. Except they are executed on 
 Prints its input to console. This is mainly for debugging.
 ### Execute script (UNSAFE) / Stack params
 **this node can be very unsafe because it executes user specified code. To check the code, look for imports. Nodes will automatically become red if they contain import statements.**  
-Execute a python script, takes one input variable currently. Referred to in the code as `inp`.  
+Execute a python script, takes one input variable currently. Referred to in the code as `input0`.  
 If a parameter stacker node is connected, the node can have multiple inputs, referred to as inputN where N is the number of the input.
 **example**:
 ```python

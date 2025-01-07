@@ -1,0 +1,14 @@
+[project]
+name = "flownodes"
+description = "A ComfyUI node pack containing nodes for basic programming logic."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/gitmylo/FlowNodes"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "mylo"
+DisplayName = "FlowNodes"
+Icon = ""
